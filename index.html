@@ -187,6 +187,30 @@ section { padding-block: clamp(64px, 9vw, 112px); }
 .svc h3 { font-size: 22px; font-weight: 600; }
 .svc p { margin: 0; color: var(--muted); font-size: 16px; }
 
+
+/* ---------- Pricing ---------- */
+.price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: stretch; }
+.plan { position: relative; display: grid; gap: 14px; align-content: start; padding: 32px 28px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); }
+.plan.best { background: var(--night); color: var(--on-night); border-color: var(--night); box-shadow: 0 30px 60px -30px rgba(10,20,30,.6); }
+.plan .badge { position: absolute; top: -13px; left: 28px; background: var(--accent); color: #1a1006; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; }
+.plan h3 { font-size: 22px; font-weight: 600; }
+.price { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.price b { font-family: var(--font-display); font-size: 52px; font-weight: 800; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.price s { color: var(--muted); font-size: 18px; }
+.plan.best .price s { color: var(--on-night-muted); }
+.price small { width: 100%; color: var(--muted); font-size: 14px; }
+.plan.best .price small { color: var(--on-night-muted); }
+.plan ul { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 10px; }
+.plan li { display: flex; gap: 10px; font-size: 16px; }
+.plan li::before { content: "✓"; color: var(--accent); font-weight: 800; }
+.plan .btn { justify-self: start; margin-top: 8px; }
+.btn-outline { background: transparent; color: var(--ink); border: 2px solid var(--ink); }
+.volume { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; justify-content: space-between; padding: 22px 26px; border-radius: var(--radius); border: 1px dashed var(--line); background: var(--surface); }
+.volume p { margin: 0; color: var(--muted); }
+.volume strong { color: var(--ink); }
+.intro-note { font-size: 14px; color: var(--muted); margin-top: 14px; }
+@media (max-width: 900px) { .price-grid { grid-template-columns: 1fr; } .plan.best { order: -1; } }
+
 /* ---------- Steps ---------- */
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; counter-reset: s; }
 .step { display: grid; gap: 10px; padding-top: 22px; border-top: 3px solid var(--ink); }
@@ -204,6 +228,7 @@ section { padding-block: clamp(64px, 9vw, 112px); }
 .email { font-family: var(--font-display); font-size: clamp(19px, 2.4vw, 24px); font-weight: 800; color: #12202b; word-break: break-all; }
 .cta-box .row { display: flex; gap: 10px; flex-wrap: wrap; }
 .btn-dark { background: #12202b; color: #fff; }
+:root .volume .btn-dark { background: var(--ink); color: var(--bg); }
 .btn-line { background: transparent; color: #12202b; border: 2px solid #12202b; }
 
 footer { padding-block: 34px; color: var(--muted); font-size: 14px; }
@@ -232,7 +257,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px 24px; fl
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#top">Listing<span>Makeovers</span></a>
-    <a class="nav-link" href="#contact">Get a free photo upgrade →</a>
+    <span style="display:flex;gap:22px"><a class="nav-link" href="#pricing">Pricing</a><a class="nav-link" href="#contact">Get a free photo upgrade →</a></span>
   </div>
 </header>
 
@@ -384,6 +409,58 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px 24px; fl
         <p>A 30-second room-to-room tour made from your existing photos. No filming day needed.</p>
       </div>
     </div>
+  </div>
+</section>
+
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Pricing · per listing</div>
+      <h2>Simple pricing. Intro rates for my first clients.</h2>
+      <p class="lead">Every package starts with one free sample photo, so you see the result on your own listing before paying anything.</p>
+    </div>
+    <div class="price-grid">
+      <div class="plan">
+        <h3>Photo Refresh</h3>
+        <div class="price"><b>$99</b><s>$149</s><small>per listing · intro rate</small></div>
+        <ul>
+          <li>Up to 25 photos enhanced</li>
+          <li>Brighter light, true color, straight lines</li>
+          <li>Window views recovered</li>
+          <li>48-hour turnaround</li>
+        </ul>
+        <a class="btn btn-outline" href="mailto:ahmad@listingmakeovers.com?subject=Photo%20Refresh">Get started</a>
+      </div>
+      <div class="plan best">
+        <span class="badge">Best value</span>
+        <h3>Full Listing Package</h3>
+        <div class="price"><b>$149</b><s>$249</s><small>per listing · intro rate</small></div>
+        <ul>
+          <li>Everything in Photo Refresh</li>
+          <li>Virtual staging for empty rooms</li>
+          <li>Room-to-room walkthrough video</li>
+          <li>Ready for Airbnb, VRBO &amp; Instagram</li>
+        </ul>
+        <a class="btn btn-primary" href="mailto:ahmad@listingmakeovers.com?subject=Full%20Listing%20Package">Get started</a>
+      </div>
+      <div class="plan">
+        <h3>Walkthrough Video</h3>
+        <div class="price"><b>$99</b><s>$149</s><small>per listing · intro rate</small></div>
+        <ul>
+          <li>30–60 second guided tour</li>
+          <li>Made from your existing photos</li>
+          <li>No filming day needed</li>
+          <li>3–5 day turnaround</li>
+        </ul>
+        <a class="btn btn-outline" href="mailto:ahmad@listingmakeovers.com?subject=Walkthrough%20Video">Get started</a>
+      </div>
+    </div>
+    <div class="volume">
+      <p><strong>Manage multiple properties?</strong> Full Listing Package at <strong>$129/listing for 5–9</strong> and <strong>$99/listing for 10+</strong>.</p>
+      <a class="btn btn-dark" href="mailto:ahmad@listingmakeovers.com?subject=Portfolio%20pricing">Ask about portfolio pricing</a>
+    </div>
+    <p class="intro-note">Intro rates are for my first clients and may go up later. Virtual staging is always labeled so guests get what they see.</p>
   </div>
 </section>
 
