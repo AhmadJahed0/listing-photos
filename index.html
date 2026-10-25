@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta property="og:title" content="Listing Photo Makeovers">
 <meta property="og:description" content="Brighter, cleaner listing photos and walkthrough videos made from the photos you already have.">
-<meta property="og:image" content="https://ahmadjahed0.github.io/listing-photos/img/og-cover.jpg">
+<meta property="og:image" content="https://ahmadjahed0.github.io/listing-photos/img2/og-cover.jpg">
 <meta property="og:url" content="https://ahmadjahed0.github.io/listing-photos/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -180,10 +180,10 @@ footer { font-size: 13px; color: var(--muted); max-width: 70ch; }
   <header>
     <div class="eyebrow">For Airbnb hosts, property managers &amp; agents</div>
     <h1>Same rooms. Photos that actually book.</h1>
-    <p class="lede">Guests scroll past dark, flat listing photos. I fix lighting, color, and angles so your place looks the way it feels in person, without reshoots and without faking anything.</p>
+    <p class="lede">Guests scroll past dark, empty, flat listing photos. I brighten them, virtually stage empty rooms, and turn the photos you already have into a room-to-room walkthrough video. No reshoots, no filming.</p>
     <ul class="services">
       <li>Photo enhancement</li>
-      <li>Window &amp; sky correction</li>
+      <li>Virtual staging</li>
       <li>Walkthrough videos</li>
       <li>48-hour turnaround</li>
     </ul>
@@ -191,77 +191,128 @@ footer { font-size: 13px; color: var(--muted); max-width: 70ch; }
 
   <section class="tour" id="tour">
     <div class="shot-head">
-      <h2>Walkthrough video from your photos</h2>
-      <span class="hint">Made from 4 still photos, no filming</span>
+      <h2>Room-to-room walkthrough video</h2>
+      <span class="hint">Made from 7 still photos, no filming</span>
     </div>
-    <video id="tour-video" controls muted playsinline loop preload="metadata" poster="video/poster.jpg">
-      <source src="video/house-walkthrough.mp4" type="video/mp4">
+    <video id="tour-video" controls muted playsinline loop preload="metadata" poster="video/home-poster.jpg">
+      <source src="video/home-walkthrough.mp4" type="video/mp4">
     </video>
-    <p class="tour-note">Living room, kitchen, dining nook, bedroom. I turn the pictures already on your listing into a short tour guests can watch on Airbnb, VRBO, or social media.</p>
+    <p class="tour-note">A guest-eye walk from the living room through the kitchen, dining room and sunroom to the bedroom and bath, built entirely from the listing's existing photos.</p>
   </section>
 
   <section class="shots" id="work">
-
     <article class="shot">
-      <div class="shot-head">
-        <h2>Studio kitchen</h2>
-        <span class="hint">Tap the photo to flip</span>
-      </div>
-      <div class="frame portrait" style="aspect-ratio: 1045 / 1400" data-state="before">
-        <img class="before" src="img/01-studio-kitchen-dark-before.jpg" alt="Studio kitchen before: very dark with one harsh light source">
-        <img class="after" src="img/01-studio-kitchen-dark-after.jpg" alt="The same studio kitchen after: bright, evenly lit, tidy">
+      <div class="shot-head"><h2>Living room</h2><span class="hint">Tap the photo to flip</span></div>
+      <div class="frame" style="aspect-ratio: 1600 / 1200" data-state="before">
+        <img class="before" src="img2/1-living-room-before.jpg" alt="Living room before: empty, flat, dim" loading="lazy">
+        <img class="after" src="img2/1-living-room-after.jpg" alt="Living room after: brightened and staged" loading="lazy">
         <span class="tag b">Before</span><span class="tag a">After</span>
-        <button type="button" class="tap" id="tap-1" aria-label="Flip between before and after, studio kitchen"></button>
+        <button type="button" class="tap" id="tap-1" aria-label="Flip between before and after, Living room"></button>
       </div>
       <div class="controls">
         <div class="toggle" role="group" aria-label="Show before or after">
           <button type="button" id="b-1" data-show="before" aria-pressed="true">Before</button>
           <button type="button" id="a-1" data-show="after" aria-pressed="false">After</button>
         </div>
-        <ul class="changes"><li>Exposure lifted</li><li>Harsh shadows removed</li><li>Daylight white balance</li><li>Counter decluttered</li></ul>
+        <ul class="changes"><li>Virtually staged</li><li>Brighter, warmer light</li><li>Same walls, windows & floors</li></ul>
       </div>
     </article>
-
     <article class="shot">
-      <div class="shot-head">
-        <h2>Galley kitchen</h2>
-        <span class="hint">Tap the photo to flip</span>
-      </div>
-      <div class="frame" style="aspect-ratio: 1400 / 1045" data-state="before">
-        <img class="before" src="img/02-kitchen-dim-before.jpg" alt="Kitchen before: dim and gray">
-        <img class="after" src="img/02-kitchen-dim-after.jpg" alt="The same kitchen after: bright, warm, airy">
+      <div class="shot-head"><h2>Living room toward the kitchen</h2><span class="hint">Tap the photo to flip</span></div>
+      <div class="frame" style="aspect-ratio: 1600 / 1200" data-state="before">
+        <img class="before" src="img2/2-living-to-kitchen-before.jpg" alt="Living room toward the kitchen before: empty, flat, dim" loading="lazy">
+        <img class="after" src="img2/2-living-to-kitchen-after.jpg" alt="Living room toward the kitchen after: brightened and staged" loading="lazy">
         <span class="tag b">Before</span><span class="tag a">After</span>
-        <button type="button" class="tap" id="tap-2" aria-label="Flip between before and after, galley kitchen"></button>
+        <button type="button" class="tap" id="tap-2" aria-label="Flip between before and after, Living room toward the kitchen"></button>
       </div>
       <div class="controls">
         <div class="toggle" role="group" aria-label="Show before or after">
           <button type="button" id="b-2" data-show="before" aria-pressed="true">Before</button>
           <button type="button" id="a-2" data-show="after" aria-pressed="false">After</button>
         </div>
-        <ul class="changes"><li>Gray cast removed</li><li>Warm natural light</li><li>Shadows lifted</li></ul>
+        <ul class="changes"><li>Virtually staged</li><li>Matches the main living room</li><li>Natural daylight</li></ul>
       </div>
     </article>
-
     <article class="shot">
-      <div class="shot-head">
-        <h2>Guest bedroom</h2>
-        <span class="hint">Tap the photo to flip</span>
-      </div>
-      <div class="frame" style="aspect-ratio: 1400 / 939" data-state="before">
-        <img class="before" src="img/04-bedroom-cramped-before.jpg" alt="Bedroom before: dull and tight">
-        <img class="after" src="img/04-bedroom-cramped-after.jpg" alt="The same bedroom after: brighter and crisper">
+      <div class="shot-head"><h2>Kitchen</h2><span class="hint">Tap the photo to flip</span></div>
+      <div class="frame" style="aspect-ratio: 1600 / 900" data-state="before">
+        <img class="before" src="img2/3-kitchen-before.jpg" alt="Kitchen before: empty, flat, dim" loading="lazy">
+        <img class="after" src="img2/3-kitchen-after.jpg" alt="Kitchen after: brightened and staged" loading="lazy">
         <span class="tag b">Before</span><span class="tag a">After</span>
-        <button type="button" class="tap" id="tap-3" aria-label="Flip between before and after, guest bedroom"></button>
+        <button type="button" class="tap" id="tap-3" aria-label="Flip between before and after, Kitchen"></button>
       </div>
       <div class="controls">
         <div class="toggle" role="group" aria-label="Show before or after">
           <button type="button" id="b-3" data-show="before" aria-pressed="true">Before</button>
           <button type="button" id="a-3" data-show="after" aria-pressed="false">After</button>
         </div>
-        <ul class="changes"><li>Brighter, airier feel</li><li>Crisper bedding</li><li>Balanced color</li></ul>
+        <ul class="changes"><li>Light styling only</li><li>Brighter & cleaner</li><li>Same cabinets & appliances</li></ul>
       </div>
     </article>
-
+    <article class="shot">
+      <div class="shot-head"><h2>Dining room</h2><span class="hint">Tap the photo to flip</span></div>
+      <div class="frame" style="aspect-ratio: 1600 / 1200" data-state="before">
+        <img class="before" src="img2/4-dining-before.jpg" alt="Dining room before: empty, flat, dim" loading="lazy">
+        <img class="after" src="img2/4-dining-after.jpg" alt="Dining room after: brightened and staged" loading="lazy">
+        <span class="tag b">Before</span><span class="tag a">After</span>
+        <button type="button" class="tap" id="tap-4" aria-label="Flip between before and after, Dining room"></button>
+      </div>
+      <div class="controls">
+        <div class="toggle" role="group" aria-label="Show before or after">
+          <button type="button" id="b-4" data-show="before" aria-pressed="true">Before</button>
+          <button type="button" id="a-4" data-show="after" aria-pressed="false">After</button>
+        </div>
+        <ul class="changes"><li>Virtually staged</li><li>Table under the existing chandelier</li><li>Brighter light</li></ul>
+      </div>
+    </article>
+    <article class="shot">
+      <div class="shot-head"><h2>Sunroom</h2><span class="hint">Tap the photo to flip</span></div>
+      <div class="frame" style="aspect-ratio: 1600 / 1200" data-state="before">
+        <img class="before" src="img2/5-sunroom-before.jpg" alt="Sunroom before: empty, flat, dim" loading="lazy">
+        <img class="after" src="img2/5-sunroom-after.jpg" alt="Sunroom after: brightened and staged" loading="lazy">
+        <span class="tag b">Before</span><span class="tag a">After</span>
+        <button type="button" class="tap" id="tap-5" aria-label="Flip between before and after, Sunroom"></button>
+      </div>
+      <div class="controls">
+        <div class="toggle" role="group" aria-label="Show before or after">
+          <button type="button" id="b-5" data-show="before" aria-pressed="true">Before</button>
+          <button type="button" id="a-5" data-show="after" aria-pressed="false">After</button>
+        </div>
+        <ul class="changes"><li>Virtually staged</li><li>Garden view recovered</li><li>Same windows</li></ul>
+      </div>
+    </article>
+    <article class="shot">
+      <div class="shot-head"><h2>Bedroom</h2><span class="hint">Tap the photo to flip</span></div>
+      <div class="frame" style="aspect-ratio: 1600 / 900" data-state="before">
+        <img class="before" src="img2/6-bedroom-before.jpg" alt="Bedroom before: empty, flat, dim" loading="lazy">
+        <img class="after" src="img2/6-bedroom-after.jpg" alt="Bedroom after: brightened and staged" loading="lazy">
+        <span class="tag b">Before</span><span class="tag a">After</span>
+        <button type="button" class="tap" id="tap-6" aria-label="Flip between before and after, Bedroom"></button>
+      </div>
+      <div class="controls">
+        <div class="toggle" role="group" aria-label="Show before or after">
+          <button type="button" id="b-6" data-show="before" aria-pressed="true">Before</button>
+          <button type="button" id="a-6" data-show="after" aria-pressed="false">After</button>
+        </div>
+        <ul class="changes"><li>Virtually staged</li><li>Warm, airy light</li><li>Same windows & doorway</li></ul>
+      </div>
+    </article>
+    <article class="shot">
+      <div class="shot-head"><h2>Bathroom</h2><span class="hint">Tap the photo to flip</span></div>
+      <div class="frame" style="aspect-ratio: 1600 / 900" data-state="before">
+        <img class="before" src="img2/7-bathroom-before.jpg" alt="Bathroom before: empty, flat, dim" loading="lazy">
+        <img class="after" src="img2/7-bathroom-after.jpg" alt="Bathroom after: brightened and staged" loading="lazy">
+        <span class="tag b">Before</span><span class="tag a">After</span>
+        <button type="button" class="tap" id="tap-7" aria-label="Flip between before and after, Bathroom"></button>
+      </div>
+      <div class="controls">
+        <div class="toggle" role="group" aria-label="Show before or after">
+          <button type="button" id="b-7" data-show="before" aria-pressed="true">Before</button>
+          <button type="button" id="a-7" data-show="after" aria-pressed="false">After</button>
+        </div>
+        <ul class="changes"><li>Light spa styling</li><li>Crisper, brighter</li><li>Same fixtures & tile</li></ul>
+      </div>
+    </article>
   </section>
 
   <section class="offer" id="offer">
@@ -272,10 +323,10 @@ footer { font-size: 13px; color: var(--muted); max-width: 70ch; }
       <li><strong>I return</strong> enhanced photos within 48 hours, plus a walkthrough video made from the photos you already have. No new shoot needed.</li>
       <li><strong>You swap them in</strong> on Airbnb, VRBO, Zillow, or your own booking site.</li>
     </ol>
-    <p>Your furniture and layout stay exactly as they are. I improve light and color, I don't invent features, so guests get what they see.</p>
+    <p>Walls, windows, floors and fixtures stay exactly as they are. Virtual staging is optional and always labeled, so guests get what they see.</p>
   </section>
 
-  <footer>Examples shown are edits of free stock photos from Pexels, made to demonstrate the service.</footer>
+  <footer>Examples are edits of free stock photos from Pexels, made to demonstrate the service. Furniture in staged rooms is virtually added.</footer>
 </div>
 
 <script>
